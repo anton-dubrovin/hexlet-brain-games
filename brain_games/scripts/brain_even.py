@@ -1,28 +1,20 @@
 import random
 import prompt
+from brain_games.game import start_game
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
+    start_game(brain_even)
 
-    correct_answers = 0
-    while correct_answers < 3:
-        game_num = random.randint(0, 99)
-        print(f'Question: {game_num}')
-        answer = prompt.string('Your answer? ')
 
-        correct_answer = 'yes' if game_num % 2 == 0 else 'no'
-        if answer == correct_answer:
-            print('Correct!')
-            correct_answers += 1
-            continue
-        else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.\nLet's try again, {name}! ")
-            return
-
-    print(f'Congratulations, {name}!')
+def brain_even(start=0):
+    if start == 0:
+        print(f'Answer "yes" if the number is even, otherwise answer "no".')
+    game_num = random.randint(0, 99)
+    print(f'Question: {game_num}')
+    answer = prompt.string('Your answer? ')
+    correct_answer = 'yes' if game_num % 2 == 0 else 'no'
+    return answer, correct_answer
 
 
 if __name__ == '__main__':
