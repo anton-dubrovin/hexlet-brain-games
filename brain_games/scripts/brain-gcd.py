@@ -10,7 +10,7 @@ def main():
 
 def brain_gcd(start=0):
     if start:
-        print(f'Find the greatest common divisor of given numbers.')
+        print('Find the greatest common divisor of given numbers.')
     game_num1 = random.randint(0, 99)
     game_num2 = random.randint(0, 99)
 
