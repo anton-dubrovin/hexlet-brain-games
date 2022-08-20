@@ -8,7 +8,9 @@ def start_game(game):
 
     correct_answers = 0
     while correct_answers < 3:
-        answer, correct_answer = game(correct_answers)
+        first_game = 1 if correct_answers else 0
+        answer, correct_answer = game(first_game)
+
         if answer == correct_answer:
             print('Correct!')
             correct_answers += 1
