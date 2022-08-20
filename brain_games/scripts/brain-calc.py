@@ -10,8 +10,8 @@ def main():
 def brain_calc(start=0):
     if start:
         print(f'What is the result of the expression?')
-    calc_num1 = random.randint(0, 9)
-    calc_num2 = random.randint(0, 9)
+    calc_num1 = random.randint(0, 99)
+    calc_num2 = random.randint(0, 99)
     calc_operation = ['+', '-', '*'][random.randint(0, 2)]
 
     print(f'Question: {calc_num1} {calc_operation} {calc_num2}')
